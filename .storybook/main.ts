@@ -1,3 +1,5 @@
+import { StorybookViteConfig } from "@storybook/builder-vite";
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -12,4 +14,4 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-};
+} as StorybookViteConfig;
