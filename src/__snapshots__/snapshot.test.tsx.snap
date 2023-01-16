@@ -1,0 +1,166 @@
+// Vitest Snapshot v1
+
+exports[`Storybook Snapshots > 'Board' > BoardWithAllTriangle 1`] = `
+<div>
+  <div
+    class="status"
+  >
+    Winner: △
+  </div>
+  <div
+    class="board-row"
+  >
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+  </div>
+  <div
+    class="board-row"
+  >
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+  </div>
+  <div
+    class="board-row"
+  >
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+    <button
+      class="square"
+    >
+      △
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'Game' > GameWithNoProps 1`] = `
+<div>
+  <div
+    class="game"
+  >
+    <div
+      class="game-board"
+    >
+      <div
+        class="status"
+      >
+        Next player: X
+      </div>
+      <div
+        class="board-row"
+      >
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+      </div>
+      <div
+        class="board-row"
+      >
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+      </div>
+      <div
+        class="board-row"
+      >
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+        <button
+          class="square"
+        />
+      </div>
+    </div>
+    <div
+      class="game-info"
+    >
+      <ol>
+        <li>
+          <button>
+            Go to game start
+          </button>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'Square' > SquareWithO 1`] = `
+<div>
+  <button
+    class="square"
+  >
+    O
+  </button>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'Square' > SquareWithTriangle 1`] = `
+<div>
+  <button
+    class="square"
+  >
+    △
+  </button>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'Square' > SquareWithX 1`] = `
+<div>
+  <button
+    class="square"
+  >
+    X
+  </button>
+</div>
+`;
