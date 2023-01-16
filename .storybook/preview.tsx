@@ -1,5 +1,5 @@
 import React from "react";
-import type { Parameters } from "@storybook/addons";
+import type { Parameters, DecoratorFunction } from "@storybook/addons";
 import "../src/assets/style.css";
 
 export const parameters: Parameters = {
@@ -12,4 +12,8 @@ export const parameters: Parameters = {
   },
 };
 
-export const decorators = [(Story: React.FC<unknown>) => <Story />];
+const baseDecorator: DecoratorFunction<JSX.Element> = (Story) => <Story />;
+
+export const decorators: Array<DecoratorFunction<JSX.Element>> = [
+  baseDecorator,
+];
