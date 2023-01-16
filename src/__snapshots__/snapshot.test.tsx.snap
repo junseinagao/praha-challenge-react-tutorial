@@ -78,7 +78,7 @@ exports[`Storybook Snapshots > 'Game' > GameWithNoProps 1`] = `
       <div
         class="status"
       >
-        Next player: X
+        次のプレイヤー: X
       </div>
       <div
         class="board-row"
