@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "prepreview-storybook": "npm run build-storybook",
+    "preview-storybook": "http-server storybook-static",
+    "e2e:vrt": "playwright test tests/snapshot.test.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
@@ -33,6 +36,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
     "babel-loader": "^8.3.0",
+    "http-server": "^14.1.1",
     "jsdom": "^21.1.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",

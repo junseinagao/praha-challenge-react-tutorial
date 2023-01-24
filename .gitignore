@@ -25,3 +25,6 @@ dist-ssr
 
 storybook-static
 !storybook-static/*.json
+/test-results/
+/playwright-report/
+/playwright/.cache/
