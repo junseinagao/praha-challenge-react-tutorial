@@ -67,6 +67,11 @@ export const Board: FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <div className="board-row">
+        <Square value={squares[9]} onSquareClick={() => handleClick(9)} />
+        <Square value={squares[10]} onSquareClick={() => handleClick(10)} />
+        <Square value={squares[11]} onSquareClick={() => handleClick(11)} />
+      </div>
     </>
   );
 };
