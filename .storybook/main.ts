@@ -13,5 +13,6 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    buildStoriesJson: true,
   },
 } as StorybookViteConfig;
