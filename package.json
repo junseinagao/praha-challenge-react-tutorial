@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "prepreview": "npm run build",
     "preview": "vite preview",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "prepreview-storybook": "npm run build-storybook",
     "preview-storybook": "http-server storybook-static",
-    "vrt": "playwright test tests/snapshot.test.ts",
-    "vrt:pass": "playwright test tests/snapshot.test.ts  --update-snapshots",
+    "vrt": "playwright test tests/snapshot.test.ts --config=playwright.vrt.config.ts",
+    "vrt:pass": "playwright test tests/snapshot.test.ts  --update-snapshots --config=playwright.vrt.config.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
