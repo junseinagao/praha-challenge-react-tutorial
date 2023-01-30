@@ -3,10 +3,15 @@ import { FC } from "react";
 type SquareProps = {
   value: string;
   onSquareClick: () => void;
+  testId: number;
 };
-export const Square: FC<SquareProps> = ({ value, onSquareClick }) => {
+export const Square: FC<SquareProps> = ({ value, onSquareClick, testId }) => {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button
+      data-test={`square-button-${testId}`}
+      className="square"
+      onClick={onSquareClick}
+    >
       {value}
     </button>
   );

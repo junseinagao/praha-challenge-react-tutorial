@@ -48,30 +48,26 @@ export const Board: FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
   } else {
     status = "次のプレイヤー: " + (xIsNext ? "X" : "O");
   }
-
   return (
     <>
       <div className="status">{status}</div>
-      <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="board-row">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
-      <div className="board-row">
-        <Square value={squares[9]} onSquareClick={() => handleClick(9)} />
-        <Square value={squares[10]} onSquareClick={() => handleClick(10)} />
-        <Square value={squares[11]} onSquareClick={() => handleClick(11)} />
-      </div>
+      {[...Array(3).keys()].map((i) => (
+        <div className="board-row" key={`board-row-${i}`}>
+          {[...Array(3).keys()].map((j) => {
+            const index = i * 3 + j;
+            const value = squares[index];
+            const onSquareClick = () => handleClick(index);
+            return (
+              <Square
+                key={`square-${index}`}
+                testId={index}
+                value={value}
+                onSquareClick={onSquareClick}
+              />
+            );
+          })}
+        </div>
+      ))}
     </>
   );
 };
