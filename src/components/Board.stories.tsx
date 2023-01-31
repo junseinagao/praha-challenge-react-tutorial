@@ -17,3 +17,11 @@ BoardWithAllTriangle.args = {
   xIsNext: false,
   onPlay: () => {},
 };
+
+export const BoardWhenDraw = Template.bind({});
+
+BoardWhenDraw.args = {
+  squares: ["x", "o", "o", "o", "x", "x", "x", "x", "o"],
+  xIsNext: false,
+  onPlay: () => {},
+};
