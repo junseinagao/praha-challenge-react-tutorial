@@ -12,6 +12,7 @@
     "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "prepreview-storybook": "npm run build-storybook",
     "preview-storybook": "http-server storybook-static",
+    "e2e": "playwright test tests/e2e.test.ts",
     "vrt": "playwright test tests/snapshot.test.ts --config=playwright.vrt.config.ts",
     "vrt:pass": "playwright test tests/snapshot.test.ts  --update-snapshots --config=playwright.vrt.config.ts",
     "test": "vitest",
