@@ -26,5 +26,6 @@ test.describe("Game", () => {
     await page.locator('[data-test="square-button-6"]').click();
     await page.locator('[data-test="square-button-5"]').click();
     await expect(page.locator(".status")).toHaveText("Draw!");
+    await expect(page.locator(".status")).not.toHaveText(/Winner: ./);
   });
 });

@@ -2,6 +2,12 @@ import { FC } from "react";
 import { Square } from "./Square";
 import { Squares } from "./types";
 
+const calculateDraw = (squares: Squares) => {
+  return (
+    squares.every((square) => square !== null) && !calculateWinner(squares)
+  );
+};
+
 const calculateWinner = (squares: Squares) => {
   const lines = [
     [0, 1, 2],
@@ -47,6 +53,10 @@ export const Board: FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
     status = "Winner: " + winner;
   } else {
     status = "次のプレイヤー: " + (xIsNext ? "X" : "O");
+  }
+  const isDraw = calculateDraw(squares);
+  if (isDraw) {
+    status = "Draw!";
   }
   return (
     <>
